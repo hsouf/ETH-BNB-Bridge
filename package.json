@@ -1,0 +1,15 @@
+{
+  "name": "bnb_eth_bridge",
+  "version": "1.0.0",
+  "description": "This is the relayer of the bridge that will allow transfer of ERC20 - BEP20 tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soufiane HAJAZI",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ethers": "^5.4.5"
+  }
+}
