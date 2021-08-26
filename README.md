@@ -10,7 +10,7 @@
    </h3>
 
 What would a universal network for sending value, independent of any company or currency look like? How about routing value the same way we are routing packets of data today? 
-Achieving that today now requires passing through a centralized entity who would force you to pass a KYC, enable 2FA and at the end swapping 1 simple BNB to ETH would take at least 3 minutes of your time while giving up on your identity and your very sensible data. This is why I've always dreamed of a decentralized routing mechanism where some token vaults will be distributed the same way Ethereum nodes are distributed all over the globe and who would serve you right, without corrupting your identity. And allow you to swap for the exact price of the the market as the relaye designed below is relying on real time price data API to do the math. 
+Achieving that today now requires passing through a centralized entity who would force you to pass a KYC, enable 2FA and at the end swapping 1 simple BNB to ETH would take at least 3 minutes of your time while giving up on your identity and your very sensible data. This is why I've always dreamed of a decentralized routing mechanism where some token vaults will be distributed the same way Ethereum nodes are distributed all over the globe and who would serve you right, without corrupting your identity. And allow you to swap for the exact price of the the market as the bridge designed below is relying on real time price data API to do the math. 
 
 
 
