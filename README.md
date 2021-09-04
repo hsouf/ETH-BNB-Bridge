@@ -10,7 +10,7 @@
    </h3>
 
 What would a universal network for sending value, independent of any company or currency look like? How about routing value the same way we are routing packets of data today? 
-Achieving that today now requires passing through a centralized entity who would force you to pass a KYC, enable 2FA and at the end swapping 1 simple BNB to ETH would take at least 3 minutes of your time while giving up on your identity and your very sensible data. This is why I've always dreamed of a decentralized routing mechanism where some token vaults will be distributed the same way Ethereum nodes are distributed all over the globe and who would serve you right, without corrupting your identity. And allow you to swap for the exact price of the the market as the bridge designed below is relying on real time price data API to do the math. 
+Achieving that today now requires passing through a centralized entity who would force you to pass a KYC, enable 2FA and at the end swapping 1 simple BNB to ETH would take at least 3 minutes of your time while giving up on your identity and your very sensible data. This is why I've always dreamed of a decentralized routing mechanism where some token vaults will be distributed the same way Ethereum nodes are distributed all over the globe and who would serve you right, without corrupting your identity, and allow you to swap for the exact price of the the market as the bridge designed below is relying on real time price data API to do the math. 
 
 
 
@@ -26,11 +26,12 @@ Achieving that today now requires passing through a centralized entity who would
    The BNB & ETH Vault smart contracts
    </h3>
      
- The vault smart contract has a support functions that allow anyone to add liquidity and remove it as well as keep record of all LP fees aggregated  during swaps. 
+ The vault smart contract allows anyone to add or remove liquidity as well as keep record of all LP fees aggregated  during swaps. ( Handling liquidity in each contract will be improved soon)
    
 
    
    Let's see how a simple swap of BNB to ETH works : 
+   
    1- the user will have to send the amount of BNB  he desires to swap for ETH to the smart contract
    ```Solidity
    
