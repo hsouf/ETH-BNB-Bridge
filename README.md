@@ -19,8 +19,9 @@ Achieving that today now requires passing through a centralized entity who would
    </h3>
 
    
-   ![design_vault_v2](https://user-images.githubusercontent.com/37840702/130485116-7e3a572b-582b-4e7d-b23a-6853e1b5e09c.png)
    
+   ![dia](https://user-images.githubusercontent.com/37840702/135614029-f9f10dce-d7b2-4207-b907-a65fec051df6.png)
+
    
    <h3 name="vault">
    The BNB & ETH Vault smart contracts
