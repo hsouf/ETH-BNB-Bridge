@@ -75,7 +75,4 @@ Achieving that today now requires passing through a centralized entity who would
    ```
 - When sending funds I had to choose between the 3 possible ways (send, call and transfer) the only difference is in how they deal with gas, while the call is the most preferred it doesn’t set a limit for the gas used in the transaction which makes it an easy threat to reentrancy attacks, that's why I used a ```nonReentrant``` modifier
    
-   <h4>
-   Another design architecture : 
-   </h4>
-   Another approach would have to use chainlink  oracles to get the price data to the smart contract directly without the binance API to do the math in house instead of on aremote server. 
+   
