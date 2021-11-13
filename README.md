@@ -17,6 +17,11 @@ Achieving that today now requires passing through a centralized entity who would
 <h3 name="bridgeDesign">
    Designing the bridge
    </h3>
+   
+   At the core of the bridge you will find: 
+   +Prices tickers that are fetched using the public Binance API <br/>
+   +Relayers watching for any event on vault contracts<br/>
+   +The vault contracts  processing transfers and deposits<br/>
 
    
    
