@@ -4,7 +4,7 @@
     Swapping BNB to ETH is now possible: building the BNB/ETH Bridge
 
  </h2>
- 
+ ⚠️ This codebase has not been audited, might contain bugs and should not be used in production. ⚠️
  <h3 name="l3">
    The need for interoperability
    </h3>
@@ -41,10 +41,10 @@ Achieving that today now requires passing through a centralized entity who would
    1- the user will have to send the amount of BNB  he desires to swap for ETH to the smart contract
    ```Solidity
    
-    function swapBnbToEth(address to, uint256 amount) public payable nonReentrant  {
-        require(msg.value == amount,"amount not equal to value");
+    function swapBnbToEth(address receiver) public payable nonReentrant  {
+        require(msg.value > 0,"not enough value");
         
-        uint256 feeAmount=msg.value.mul(2).div(1000); //using msg.value instead of amount (never trust user input)
+        uint256 feeAmount=msg.value.mul(2).div(1000); // A fee of 0.2% applies
         uint256 amountMinusFee=msg.value.sub(feeAmount);
         aggregatedFees= aggregatedFees.add(feeAmount);
         
@@ -58,7 +58,7 @@ Achieving that today now requires passing through a centralized entity who would
     let BNB_ETH_PRICE = prices.fetchBNBETHpriceTicker("BNBETH");//fetchethe price from Binance API
     let amount = new ethers.BigNumber.from(bnbAmount);
 
-    var price_BNB_ETH = parseFloat(BNB_ETH_PRICE) * 100000; // the result returned by the BInance API is in 5 decimals
+    var price_BNB_ETH = parseFloat(BNB_ETH_PRICE) * 100000; // returned price with a precision of 5
     var amountToSendInEther = amount.mul(price_BNB_ETH.toString()).div(100000);
 
     sendEthOptimistically(to, amountToSendInEther.toString()); //sends order to the vault smart contract to send eth
