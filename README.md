@@ -71,7 +71,7 @@ Achieving that today now requires passing through a centralized entity who would
    function sendEth(address to, uint256 amount) public payable onlyOwner returns(bool success) {
         
         //this function will send the calculated amount of eth the account is entitled to receive
-        (success,)=to.call{value:amount}("");// it's always a good practice to use call instead of send of transfer (gas limit considerations...)
+        (success,)=to.call{value:amount}("");// it's always a good practice to use call instead of send or transfer (gas limit considerations...)
         require(success,"failed transaction");
         
         emit ethSent(to, amount);//the ethRelayer listens for "ethSent" event to notice the user of the arrival of his funds to the given address 
@@ -79,6 +79,6 @@ Achieving that today now requires passing through a centralized entity who would
    
    
    ```
-- When sending funds I had to choose between the 3 possible ways (send, call and transfer) the only difference is in how they deal with gas, while the call is the most preferred it doesn’t set a limit for the gas used in the transaction which makes it an easy threat to reentrancy attacks, that's why I used a ```nonReentrant``` modifier
+- When sending funds I had to choose between the 3 possible ways (send, call and transfer) the only difference is in how they deal with gas, while the call is the most preferred it doesn’t set a limit for the gas used in the transaction which makes it an easy threat to reentrancy attacks, that's why a ```nonReentrant``` modifier could be added...
    
    
