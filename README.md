@@ -1,4 +1,4 @@
-# ETH_BNB_BRIDGE
+# Optimistic ETH<->BNB BRIDGE
 
 <h2 name="bridge">
     Swapping BNB to ETH is now possible: building the BNB/ETH Bridge
@@ -8,6 +8,9 @@
  <h3 name="l3">
    The need for interoperability
    </h3>
+   
+   ![bridge_optimistic](https://user-images.githubusercontent.com/37840702/184388009-d2de01c1-5fbb-41a3-a763-330a11b99392.png)
+
 
 What would a universal network for sending value, independent of any company or currency look like? How about routing value the same way we are routing packets of data today? 
 Achieving that today now requires passing through a centralized entity who would force you to pass a KYC, enable 2FA and at the end swapping 1 simple BNB to ETH would take at least 3 minutes of your time while giving up on your identity and your very sensible data. This is why I've always dreamed of a decentralized routing mechanism where some token vaults will be distributed the same way Ethereum nodes are distributed all over the globe and who would serve you right, without corrupting your identity, and allow you to swap for the exact price of the the market as the bridge designed below.
@@ -25,7 +28,7 @@ Achieving that today now requires passing through a centralized entity who would
 
    
    
-   ![dia](https://user-images.githubusercontent.com/37840702/135614029-f9f10dce-d7b2-4207-b907-a65fec051df6.png)
+ 
 
    
    <h3 name="vault">
