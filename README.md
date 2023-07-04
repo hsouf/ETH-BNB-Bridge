@@ -67,7 +67,7 @@ Achieving that today now requires passing through a centralized entity who would
     sendEthOptimistically(to, amountToSendInEther.toString()); //sends order to the vault smart contract to send eth
   });
    ```
-   3- The owner of the Ethereum vault smart contract on the other side   will now send a transaction (a send ether order) calling the following function :
+   3- The owner of the Ethereum vault smart contract on the other side   will now initiate a send ether order calling the following function :
    
    ```Solidity
    
@@ -82,6 +82,5 @@ Achieving that today now requires passing through a centralized entity who would
    
    
    ```
-- When sending funds I had to choose between the 3 possible ways (send, call and transfer) the only difference is in how they deal with gas, while the call is the most preferred it doesn’t set a limit for the gas used in the transaction which makes it an easy threat to reentrancy attacks, that's why a ```nonReentrant``` modifier could be added...
    
    
