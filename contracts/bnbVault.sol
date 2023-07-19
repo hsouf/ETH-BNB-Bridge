@@ -30,12 +30,9 @@ contract bnbVault is ReentrancyGuard, Ownable {
         liquidityProviders[msg.sender].totalLiquidity += msg.value;
     }
 
-    function removeLiquidity(uint256 amount)
-        public
-        payable
-        nonReentrant
-        returns (bool success)
-    {
+    function removeLiquidity(
+        uint256 amount
+    ) public payable nonReentrant returns (bool success) {
         require(
             liquidityProviders[msg.sender].totalLiquidity >= amount,
             "not enough liquidity"
@@ -50,11 +47,10 @@ contract bnbVault is ReentrancyGuard, Ownable {
         liquidityProviders[msg.sender].totalLiquidity -= msg.value;
     }
 
-    function swapBnbToEth(address to, uint256 amount)
-        public
-        payable
-        nonReentrant
-    {
+    function swapBnbToEth(
+        address to,
+        uint256 amount
+    ) public payable nonReentrant {
         require(msg.value == amount, "amount not equal to value");
 
         uint256 feeAmount = msg.value.mul(2).div(1000);
@@ -64,12 +60,10 @@ contract bnbVault is ReentrancyGuard, Ownable {
         emit SwapBnbToEth(msg.sender, to, amountMinusFee);
     }
 
-    function sendBnb(address to, uint256 amount)
-        public
-        payable
-        onlyOwner
-        returns (bool success)
-    {
+    function send(
+        address to,
+        uint256 amount
+    ) public payable onlyOwner returns (bool success) {
         (success, ) = to.call{value: amount}("");
         require(success, "failed transaction");
 
