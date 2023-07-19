@@ -11,6 +11,7 @@
    
 What would a universal network for sending value, independent of any company or currency, look like? Could we route value in the same way that we are routing packets of data today?
 
+<img width="788" alt="bridge" src="https://github.com/hsouf/ETH-BNB-Bridge/assets/37840702/183aa833-46f0-47f0-aa18-ba6f3a3f4cf5">
 
 
 <h3 name="bridgeDesign">
